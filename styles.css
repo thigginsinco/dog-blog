@@ -1,11 +1,11 @@
 /* Master Styles */
 h1 {
-  color: white;
+  color: #ff1200;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 250%;
 }
 h2, h3 {
-  color: white;
+  color: #ff1200;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
 }
@@ -16,38 +16,6 @@ body {
 .selected {
 	background-color: #CFD8DC !important;
 	color: white;
-}
-.inLeague {
-	background-color: #ff6600 !important;
-}
-.heroes {
-	margin: 0 0 2em 0;
-	list-style-type: none;
-	padding: 0;
-	width: 15em;
-}
-.heroes li {
-	cursor: pointer;
-	position: relative;
-	left: 0;
-	background-color: #EEE;
-	margin: .5em;
-	padding: .3em 0;
-	height: 1.6em;
-	border-radius: 4px;
-}
-.heroes li.selected:hover {
-	background-color: #BBD8DC !important;
-	color: white;
-}
-.heroes li:hover {
-	color: #607D8B;
-	background-color: #DDD;
-	left: .1em;
-}
-.heroes .text {
-	position: relative;
-	top: -3px;
 }
 .badge {
 	display: inline-block;
@@ -64,7 +32,20 @@ body {
 	border-radius: 4px 0 0 4px;
 }
 .noted {
-	opacity: ;
+	color: #ff1200;
+	width: 8em;
+
 }
-
-
+.parks {
+	color: #ff1200;
+}
+.btn {
+	color: black;
+	font-size: small;
+}
+.link {
+	color: #ff1200;
+}
+.back {
+	background-color: rgba(255, 255, 255, 0.8);
+}

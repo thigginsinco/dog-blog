@@ -12,18 +12,46 @@ import { DataService } from './data.service';
 		<div *ngIf="park">
 			<h2>{{park.park}} details!</h2>
 			<div>
-				<label>Location:</label>
+				<label class="noted">Park Name:</label>
+				<input [(ngModel)]="park.park" placeholder="Park Name" type="text"/>
+			</div>
+			<div>
+				<label class="noted">Location:</label>
 				<input [(ngModel)]="park.location" placeholder="Park Location"/>
 			</div>
 			<div>
-				<label>Park View:</label>
-				<input [(ngModel)]="park.pic" placeholder="pic"/>
+				<label class="noted">Park Picture:</label>
+				<input [(ngModel)]="park.pic" placeholder="image name.type"/>
 			</div>
-			<div class="noted">
-				<label>Park notes:</label>
-				<input [(ngModel)]="park.note" placeholder="Notes"/>
+			<div>
+				<label class="noted">Park notes:</label>
+				<textarea [(ngModel)]="park.note" placeholder="Notes"></textarea>
 			</div>
-			<button (click)="goBack()">Back</button>
+			<div>
+				<label class="noted">Have water?</label>
+				<input [(ngModel)]="park.water" type="checkbox"/>
+			</div>
+			<div>
+				<label class="noted">Shady?</label>
+				<input [(ngModel)]="park.shade" type="checkbox"/>
+			</div>
+			<div>
+				<label class="noted">Seating?</label>
+				<input [(ngModel)]="park.seating" type="checkbox"/>
+			</div>
+			<div>
+				<label class="noted">Grassy?</label>
+				<input [(ngModel)]="park.grass" type="checkbox"/>
+			</div>
+			<div>
+				<label class="noted">Rocky?</label>
+				<input [(ngModel)]="park.rock" type="checkbox"/>
+			</div>
+			<div>
+				<button class="btn" (click)="goBack()">Back</button>
+				<button class="btn" (click)="friendList(park)">Friends</button>
+				<button class="btn" (click)="visitDetails(park)">Visit</button>
+			</div>
 		</div>
 	`
 })
@@ -41,11 +69,22 @@ export class ParkDetailComponent {
 		this.location.back();
 	}
 
+	friendList(park: Park): void {
+		console.log(park.park, "park name");
+		this.router.navigate(['/friend', park.park]);
+	}
+
+	visitDetails(park: Park): void {
+		// console.log(park.park, "park name");
+		this.router.navigate(['/details', park.park]);
+	}
+
 	ngOnInit() {
 		this.route.params.forEach((params: Params) => {
 			let parkId = parseInt(params['id'], 10);
 			this.park = this.dataService.getPark(parkId);
-			this.dataService.bgimage = this.park.pic;
+// 			console.log(this.park.pic);
+			this.setBgImage(this.park.pic);
 
 		});
 	}
@@ -53,10 +92,11 @@ export class ParkDetailComponent {
 	setBgImage(src: string) {
     // set the image, or a default if there is no image
 		if (src === "") {
+			// console.log(src, "source bgimage");
 	        // use default image
-			this.bgimage = goat.jpg;
+			this.dataService.bgimage = "goat.jpg";
 		} else {
-			this.bgimage = this.park.pic;
+			this.dataService.bgimage = this.park.pic;
 		}
 	}
 }

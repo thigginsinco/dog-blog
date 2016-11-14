@@ -12,6 +12,10 @@ import { HeroTabComponent } from "./hero-tab.component";
 
 import { ParkViewComponent } from './park-view.component';
 import { ParkDetailComponent } from './park-detail.component';
+import { FriendViewComponent } from './friend-view.component';
+import { FriendDetailComponent } from './friend-detail.component';
+import { VisitDetailComponent } from './visit-detail.component';
+import { VisitViewComponent } from './visit-view.component';
 import { DataService } from './data.service';
 
 import { AppRoutingModule } from "./app-routing.module";
@@ -34,7 +38,11 @@ import { AppRoutingModule } from "./app-routing.module";
 		LeagueViewComponent,
 		HeroTabComponent,
 		ParkViewComponent,
-		ParkDetailComponent
+		ParkDetailComponent,
+		FriendViewComponent,
+		FriendDetailComponent,
+		VisitViewComponent,
+		VisitDetailComponent
 	],
 	bootstrap: [ AppComponent ]
 })

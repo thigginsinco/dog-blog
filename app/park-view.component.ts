@@ -13,6 +13,10 @@ import { DataService } from './data.service';
 				(click)="onSelect(park)"	
 			>{{park.park}}</li>
 		</ul>
+		<div>
+			<button class="btn" (click)="newPark()">New Park</button>
+		</div>
+
 	`
 })
 export class ParkViewComponent {
@@ -32,4 +36,11 @@ export class ParkViewComponent {
 	onSelect(park: Park): void {
 		this.router.navigate(['/park', park.id]);
 	}
+	newPark(): void {
+		this.dataService.addPark((park) => {
+			this.router.navigate(['/park', park.id]);
+
+		});
+	}
+
 }
