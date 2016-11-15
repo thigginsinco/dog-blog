@@ -5,13 +5,13 @@ import { DataService } from './data.service';
 	selector: 'my-app',
 	template: `
 		<div class="back">
-		<div class='background' [style.background-image]='"url(./img/" + dataservice.bgimage + ")"'>
-		<h1>{{title}}</h1>
-		<nav class="noted">
-			<a class="link" routerLink="/" routerLinkActive="active">Home</a>
-		</nav>
-		<router-outlet></router-outlet>
-		</div>
+			<div class='background' [style.background-image]='"url(./img/" + dataservice.bgimage + ")"'>
+				<h1>{{title}}</h1>
+				<nav class="noted">
+					<a class="link" routerLink="/" routerLinkActive="active">Home</a>
+				</nav>
+				<router-outlet></router-outlet>
+			</div>
 		</div>
 	`,
 	styles: [

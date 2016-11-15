@@ -8,6 +8,7 @@ import { DataService } from './data.service';
 
 @Component({
 	template: `
+		<h2>{{this.parkName}}</h2>
 		<h2>Friends I've met</h2>
 		<ul class="noted">
 			<li *ngFor="let friend of friends"
@@ -33,12 +34,13 @@ export class FriendViewComponent {
 
 	title = 'Dog Blog';
 	friends = [];
+	parkName = "";
 
 	ngOnInit() {
 		this.route.params.forEach((params: Params) => {
-			let parkName = (params['park']);
+			this.parkName = (params['park']);
 // 			console.log(parkName, "park");
-			this.friends = this.dataService.getFriends(parkName);
+			this.friends = this.dataService.getFriends(this.parkName);
 		});
 
 // 		this.friends = this.dataService.getFriends();
@@ -49,8 +51,9 @@ export class FriendViewComponent {
 	}
 
 	newFriend(): void {
-		this.dataService.addFriend((friend) => {
-		this.router.navigate(['/friends', friend.park]);
+		console.log("new friend fvc", this.parkName);
+		this.dataService.addFriend(this.parkName, (friend) => {
+		this.router.navigate(['/friends', friend.friend]);
 		});
 	}
 

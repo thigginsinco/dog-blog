@@ -11,7 +11,7 @@ export class DataService {
 		{ park: '1st Creek', friend: 'Candy, Eric', dog: 'Rambo, Cody', note: 'German Shepherds', pic: '' },
 		{ park: '1st Creek', friend: 'Stephanie', dog: 'Piper', note: 'Bug', pic: '' },
 		{ park: '1st Creek', friend: 'Jana', dog: 'Rocky, Lilly', note: '', pic: '' },
-		{ park: 'Fruitdale', friend: 'Steve', dog: 'Flash', note: 'Cattle mix', pic: '' },
+		{ park: 'Fruitdale', friend: 'Steve', dog: 'Flash', note: 'Cattle mix', pic: 'flash.jpg' },
 	];
 
 	private parks: Park[] = [
@@ -88,9 +88,9 @@ export class DataService {
 		});
 	}
 
-	addFriend(cb) {
+	addFriend(parkname, cb) {
 		let friend = {
-			park: "",
+			park: parkname,
 			friend: "",
 			dog: "",
 			note: "",
@@ -121,16 +121,16 @@ export class DataService {
 		console.log("add visit", parkname);
 			var date = new Date();
 			var month = date.getUTCMonth() + 1;
-			if (month < 10) {
-				month = "0" + month;
-			}
+			// if (month < 10) {
+			// 	month = "0" + month;
+			// }
 			var day = date.getUTCDate();
 			var year = date.getUTCFullYear();
 			var newdate = year + "/" + month + "/" + day;
 			let visit = {
 			park: parkname,
 			date: newdate,
-			note: "new note"
+			note: ""
 		};
 		this.visits.push(visit);
 		cb(visit);

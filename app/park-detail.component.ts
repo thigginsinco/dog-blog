@@ -70,7 +70,7 @@ export class ParkDetailComponent {
 	}
 
 	friendList(park: Park): void {
-		console.log(park.park, "park name");
+		console.log("park name friendList", park.park);
 		this.router.navigate(['/friend', park.park]);
 	}
 

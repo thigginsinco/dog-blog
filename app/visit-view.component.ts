@@ -45,12 +45,8 @@ export class VisitViewComponent {
 			this.visits = this.dataService.getVisits(parkName);
 		});
 
-// 		this.friends = this.dataService.getFriends();
 	}
 
-	// onSelect(friend: Friend): void {
-	// 	this.router.navigate(['/friends', friend.friend]);
-	// }
 	onSelect(visit: Visit): void {
 		// console.log(visit, "vvc park");
 		this.router.navigate(['/detail', visit.park, visit.date]);
@@ -67,13 +63,6 @@ export class VisitViewComponent {
 		});
 	}
 
-	// newVisit(park: Park): void {
-	// 	console.log(this.parkname, "vdc newvisit");
-	// 	let pkname = this.parkname;
-	// 	this.dataService.addVisit(pkname, (visit) => {
-	// 	this.router.navigate(['/detail', parkname, parkDate]);
-	// 	});
-	// }
 	goBack() {
 		this.location.back();
 	}

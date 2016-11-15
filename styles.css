@@ -33,7 +33,7 @@ body {
 }
 .noted {
 	color: #ff1200;
-	width: 8em;
+	width: 9em;
 
 }
 .parks {
@@ -43,7 +43,7 @@ body {
 	color: black;
 	font-size: small;
 }
-.link {
+.link, .link:visited {
 	color: #ff1200;
 }
 .back {

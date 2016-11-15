@@ -20,7 +20,7 @@ import { DataService } from './data.service';
 				<input [(ngModel)]="friend.friend" placeholder="Friend(s) Name" type="text"/>
 			</div>
 			<div>
-				<label class="noted">Location:</label>
+				<label class="noted">Pup Name:</label>
 				<input [(ngModel)]="friend.dog" placeholder="Dog(s) name"/>
 			</div>
 			<div>
@@ -31,12 +31,22 @@ import { DataService } from './data.service';
 				<label class="noted">Picture:</label>
 				<input [(ngModel)]="friend.pic" placeholder="image name.type"/>
 			</div>
+			<div *ngIf="friend.pic">
+				<img class="dogpic" [src]='"./img/" + friend.pic' alt="Dog park friend">
+			</div>
 			<div>
 				<button class="btn" (click)="goBack()">Back</button>
 				<button class="btn" (click)="visitDetails(park)">Visit</button>
 			</div>
 		</div>
+	`,
+	styles: [
 	`
+	.dogpic {
+		max-height: 50vh;
+		max-width: 100vw;
+	}
+	`]
 })
 export class FriendDetailComponent {
 	private friend: Friend;
