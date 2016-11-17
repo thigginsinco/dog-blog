@@ -10,10 +10,10 @@ import { DataService } from './data.service';
 	template: `
 		<h2>{{this.parkName}}</h2>
 		<h2>Friends I've met</h2>
-		<ul class="noted">
+		<ul class="notef">
 			<li *ngFor="let friend of friends"
 				(click)="onSelect(friend)"	
-			>{{friend.friend}}</li>
+			>{{friend.friend}}  -  {{friend.dog}}</li>
 		</ul>
 		<div>
 			<button class="btn" (click)="goBack()">Back</button>

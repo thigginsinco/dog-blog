@@ -11,6 +11,13 @@ export class DataService {
 		{ park: '1st Creek', friend: 'Candy, Eric', dog: 'Rambo, Cody', note: 'German Shepherds', pic: '' },
 		{ park: '1st Creek', friend: 'Stephanie', dog: 'Piper', note: 'Bug', pic: '' },
 		{ park: '1st Creek', friend: 'Jana', dog: 'Rocky, Lilly', note: '', pic: '' },
+		{ park: '1st Creek', friend: 'Steven', dog: 'Leo', note: '', pic: '' },
+		{ park: '1st Creek', friend: 'Angie', dog: 'Sarge', note: '', pic: '' },
+		{ park: '1st Creek', friend: 'Scott', dog: 'Axel', note: '', pic: '' },
+		{ park: '1st Creek', friend: 'Peyton', dog: 'Finley, Hailey', note: '', pic: '' },
+		{ park: '1st Creek', friend: 'Nikki, Dave', dog: 'Kai, Maddy', note: '', pic: '' },
+		{ park: '1st Creek', friend: 'Adam, Corynn', dog: 'Indy', note: '', pic: '' },
+		{ park: 'Tony Grampsas', friend: 'Joyce', dog: 'Rosie', note: '', pic: '' },
 		{ park: 'Fruitdale', friend: 'Steve', dog: 'Flash', note: 'Cattle mix', pic: 'flash.jpg' },
 	];
 
@@ -56,7 +63,7 @@ export class DataService {
 			id: this.parks.length + 1
 		};
 		this.parks.push(park);
-		console.log(this.parks.length);
+		// console.log(this.parks.length);
 
 		cb(park);
 	}

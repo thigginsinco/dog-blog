@@ -10,7 +10,7 @@ import { DataService } from './data.service';
 	selector: 'my-visit-detail',
 	template: `
 		<div *ngIf="visit">
-			<h2>{{visit.park}} events!</h2>
+			<h2>{{visit.park}} Events</h2>
 			<div>
 				<label class="noted">Date:</label>
 				<input [(ngModel)]="visit.date" placeholder="Date mm.dd.yyyy"/>

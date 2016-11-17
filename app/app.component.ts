@@ -30,6 +30,8 @@ import { DataService } from './data.service';
 export class AppComponent {
 	constructor(private dataservice: DataService) {}
 
+	title = 'dogBlog';
+
 	ngOnInit() {
 		this.dataservice.bgimage = "default.jpg";
 	}

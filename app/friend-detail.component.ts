@@ -43,7 +43,8 @@ import { DataService } from './data.service';
 	styles: [
 	`
 	.dogpic {
-		max-height: 50vh;
+		text-align: center;
+		max-height: 40vh;
 		max-width: 100vw;
 	}
 	`]

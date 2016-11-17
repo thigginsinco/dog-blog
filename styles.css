@@ -1,13 +1,16 @@
 /* Master Styles */
 h1 {
-  color: #ff1200;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 250%;
+	text-align: center;
+	color: whitesmoke;
+	font-family: Arial, Helvetica, sans-serif;
+	text-shadow: 1px 1px black;
 }
 h2, h3 {
-  color: #ff1200;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: lighter;
+	color: whitesmoke;
+	/*color: #ff1200;*/
+	font-family: Arial, Helvetica, sans-serif;
+	text-shadow: 1px 1px black;
+	font-weight: lighter;
 }
 body {
 	margin: 0;
@@ -32,19 +35,36 @@ body {
 	border-radius: 4px 0 0 4px;
 }
 .noted {
-	color: #ff1200;
+	/*color: #ff1200;*/
+	color: whitesmoke;
 	width: 9em;
+	font-size: 15px;
+	text-shadow: 1px 1px black;
+}
+
+.notef {
+	/*color: #ff1200;*/
+	color: whitesmoke;
+	width: 20em;
+	font-size: 15px;
+	text-shadow: 1px 1px black;
 
 }
+
 .parks {
-	color: #ff1200;
+	color: whitesmoke;
+	/*color: #ff1200;*/
+	font-size: 18px;
+	text-shadow: 1px 1px black;
+
 }
 .btn {
 	color: black;
 	font-size: small;
 }
 .link, .link:visited {
-	color: #ff1200;
+	color: whitesmoke;
+	/*color: #ff1200;*/
 }
 .back {
 	background-color: rgba(255, 255, 255, 0.8);

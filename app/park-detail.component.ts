@@ -10,7 +10,7 @@ import { DataService } from './data.service';
 	selector: 'park-detail',
 	template: `
 		<div *ngIf="park">
-			<h2>{{park.park}} details!</h2>
+			<h2>{{park.park}} Details</h2>
 			<div>
 				<label class="noted">Park Name:</label>
 				<input [(ngModel)]="park.park" placeholder="Park Name" type="text"/>
